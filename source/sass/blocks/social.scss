@@ -1,0 +1,59 @@
+.social__container {
+  margin-right: 130px;
+
+  @include vp-1023 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 35px;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.social__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.social__logo-text {
+  color: $color-alice-blue;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+.social__logo-name {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  margin-bottom: 5px;
+  font-family: $ff-roboto-condensed;
+}
+
+.social__logo-description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: $ff-roboto;
+  color: rgba($color-white, 0.7);
+}
+
+.social__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.social__item {
+  margin-left: 15px;
+}
+
+.social__icon {
+  fill: $color-white;
+  padding: 5px;
+}

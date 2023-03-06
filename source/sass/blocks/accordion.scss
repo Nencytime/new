@@ -1,0 +1,42 @@
+.accordion__header {
+  position: relative;
+
+  @include vp-767 {
+    cursor: pointer;
+  }
+
+  &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $color-alice-blue;
+      transition: transform 0.2s ease-out;
+    }
+
+    &::before {
+      top: 7px;
+      width: 15px;
+      height: 1px;
+      right: 26px;
+    }
+
+    &::after {
+      top: 0;
+      width: 1px;
+      height: 15px;
+      right: 33px;
+    }
+}
+
+.accordion__item-show .accordion__header::after,
+.accordion__item-slidedown .accordion__header::after {
+  transform: rotate(-90deg);
+}
+
+.accordion__item {
+  &:not(.accordion__item-show) .accordion__body {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

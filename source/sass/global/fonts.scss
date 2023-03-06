@@ -8,6 +8,25 @@
     url("../fonts/monoregular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/robotoregular.woff2") format("woff2"),
+    url("../fonts/robotoregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Condensed";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("../fonts/roboto-condensed-regular.woff2") format("woff2"),
+    url("../fonts/roboto-condensed-regular.woff") format("woff");
+}
 
 /* @font-face {
   font-style: normal;

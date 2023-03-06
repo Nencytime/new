@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import './accordion.js';
+import './show-more.js';
 
 // ---------------------------------
 
@@ -48,3 +50,28 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+/*всё тоже самое, кроме...*/
+let allElems = document.querySelectorAll('.type_3 .headingElem');
+
+allElems.forEach((elem)=>{
+    elem.addEventListener('click', function(){
+        /*находим все активные элементы*/
+        let descActive = document.querySelectorAll('.type_3 .descElem.active');
+        /*прогоняем через цикл и удаляем класс active*/
+        descActive.forEach((elem)=>{
+            elem.classList.remove('active');
+        })
+
+        let parentElem = this.parentNode;
+
+        let contentBlock = parentElem.querySelector('.descElem')
+
+        if(contentBlock.classList.contains("active")) {
+            contentBlock.classList.remove('active');
+        }
+        else {
+            contentBlock.classList.add('active');
+        }
+    })
+})
