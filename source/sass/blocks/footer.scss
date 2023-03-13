@@ -1,12 +1,15 @@
 .footer {
   background-color: $color-black-pearl;
-  padding-top: 55px;
+  padding-top: 52px;
   padding-bottom: 55px;
+
+  @include vp-1023 {
+    padding-top: 48px;
+  }
 }
 
 .footer__wrapper {
   display: flex;
-  justify-content: center;
 
   @include vp-1023 {
     display: block;
@@ -16,6 +19,7 @@
 .footer__container {
   position: relative;
   display: flex;
+  padding-top: 6px;
 
   @include vp-767 {
     display: block;
@@ -30,7 +34,6 @@
       top: -20px;
       left: -100%;
       background-color: rgba(248, 253, 255, 0.7);
-
     }
   }
 }
@@ -38,10 +41,6 @@
 .footer__block {
   margin-right: 30px;
   position: relative;
-/*
-  @include vp-767 {
-    padding-bottom: 20px;
-  } */
 
   &::before {
     @include vp-767 {
@@ -52,17 +51,21 @@
       bottom: 0;
       left: -100%;
       background-color: rgba(248, 253, 255, 0.7);
-
     }
   }
 
   @include vp-1023 {
-    margin-right: 130px;
+    margin-right: 0;
+  }
+
+  &:nth-of-type(2n) {
+    @include vp-1023 {
+      margin-left: 118px;
+    }
   }
 
   @include vp-767 {
     margin-top: 20px;
-    margin-right: 0;
     max-width: none;
   }
 }
@@ -70,8 +73,8 @@
 .footer__title {
   position: relative;
   padding: 0;
-  margin: 0 0 20px;
-  font-family: $ff-roboto;
+  margin: 0 0 23px;
+  font-family: $ff-roboto-condensed;
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
@@ -79,14 +82,6 @@
   color: $color-white;
 
   transition: opacity $trans-default;
-
- /*  &:active {
-    @include vp-767 {
-      &::after {
-        display: none;
-      }
-    }
-  } */
 
   @include vp-767 {
     padding-bottom: 20px;
@@ -123,13 +118,11 @@
 }
 
 .footer__item {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   &:last-of-type:not(&--not-last) {
     margin-bottom: 0;
-  }
 
-  &:last-of-type:not(&--not-last) {
     @include vp-767 {
       padding-bottom: 20px;
     }

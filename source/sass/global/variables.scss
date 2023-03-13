@@ -3,15 +3,10 @@
 $color-black: #000000;
 $color-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
-$color-deep-sky-blue: #00B2FF;
-$color-whisper: #EBEBEB;
-$color-alice-blue: #F2F5F7;
+$color-deep-sky-blue: #00b2ff;
+$color-whisper: #ebebeb;
+$color-alice-blue: #f2f5f7;
 $color-black-pearl: #041827;
-
-
-// Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 // ---------------------------------
@@ -24,8 +19,6 @@ $fz-default:                        16px;
 $ff-mono: "Mono", "Times New Roman", serif;
 $ff-roboto: "Roboto", "Arial", sans-serif;
 $ff-roboto-condensed: "Roboto-Condensed", "Arial", sans-serif;
-
-//$ff-placeholder: "Placeholder", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

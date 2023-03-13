@@ -3,9 +3,8 @@
 
   @include vp-767 {
     cursor: pointer;
-  }
 
-  &::after,
+    &::after,
     &::before {
       position: absolute;
       content: "";
@@ -26,6 +25,7 @@
       height: 15px;
       right: 33px;
     }
+  }
 }
 
 .accordion__item-show .accordion__header::after,

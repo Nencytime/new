@@ -1,8 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import './accordion.js';
 import './show-more.js';
+import './scroll.js';
+import './modal.js';
+import './tel-mask.js';
 
 // ---------------------------------
 
@@ -19,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    // initModals();
     const form = new Form();
     window.form = form;
     form.init();
@@ -50,28 +53,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-/*всё тоже самое, кроме...*/
-let allElems = document.querySelectorAll('.type_3 .headingElem');
-
-allElems.forEach((elem)=>{
-    elem.addEventListener('click', function(){
-        /*находим все активные элементы*/
-        let descActive = document.querySelectorAll('.type_3 .descElem.active');
-        /*прогоняем через цикл и удаляем класс active*/
-        descActive.forEach((elem)=>{
-            elem.classList.remove('active');
-        })
-
-        let parentElem = this.parentNode;
-
-        let contentBlock = parentElem.querySelector('.descElem')
-
-        if(contentBlock.classList.contains("active")) {
-            contentBlock.classList.remove('active');
-        }
-        else {
-            contentBlock.classList.add('active');
-        }
-    })
-})

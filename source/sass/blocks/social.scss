@@ -1,10 +1,10 @@
 .social__container {
-  margin-right: 130px;
+  margin-right: 174px;
 
   @include vp-1023 {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 35px;
+    margin: 0;
   }
 
   @include vp-767 {
@@ -40,13 +40,21 @@
   line-height: 14px;
   font-family: $ff-roboto;
   color: rgba($color-white, 0.7);
+
+  @include vp-1023 {
+    margin-top: -5px;
+  }
 }
 
 .social__list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -5px;
   list-style-type: none;
   display: flex;
+
+  @include vp-1023 {
+    margin: 6px -8px 0 0;
+  }
 }
 
 .social__item {

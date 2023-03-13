@@ -1,6 +1,14 @@
-import {Modals} from './modals';
-
+/* import {Modals} from './modals';
 let modals;
+ */
+/* const modal = document.querySelector('.modal');
+const button = document.querySelector('.header__button');
+const buttonClose = document.querySelector('.modal__button');
+
+button.addEventListener('click', () => modal.classList.toggle('modal-open') && modal.classList.remove('modal-close'));
+buttonClose.addEventListener('click', () => modal.classList.toggle('modal-close') && modal.classList.remove('modal-open'));
+ */
+
 
 // Здесь реализован пример открытия модалки через колбэк закрытия
 // const openModalInCloseCallback = (name, context = this) => {
@@ -13,7 +21,7 @@ let modals;
 //   openModalInCloseCallback('modal-5');
 // },
 
-const settings = {
+/* const settings = {
   'default': {
     preventDefault: true,
     stopPlay: true,
@@ -39,3 +47,4 @@ const initModals = () => {
 };
 
 export {modals, initModals};
+ */

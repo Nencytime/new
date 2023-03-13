@@ -26,9 +26,26 @@
 
 .advantages__item {
   position: relative;
-  padding: 45px 40px;
+  padding: 40px 45px;
   min-height: 300px;
   border: 1px solid $color-whisper;
+
+  @include vp-1023 {
+    padding: 38px 45px 30px;
+    min-height: 360px;
+  }
+
+  @include vp-767 {
+    min-height: 325px;
+    margin-bottom: 30px;
+    padding: 30px;
+  }
+
+  &:first-of-type .advantages__description {
+    @include vp-767 {
+      margin-bottom: 45px;
+    }
+  }
 
   &::before {
     content: "";
@@ -54,11 +71,6 @@
     color: $color-white;
   }
 
-  @include vp-767 {
-    min-height: 325px;
-    margin-bottom: 30px;
-  }
-
   &:last-of-type {
     @include vp-767 {
       margin-bottom: 0;
@@ -67,21 +79,47 @@
 }
 
 .advantages__icon {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   fill: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 9px;
+  }
 }
 
 .advantages__item-title {
   padding: 0;
-  margin: 0 0 15px;
+  margin: 0 0 14px;
   color: $color-deep-sky-blue;
   font-size: 24px;
   line-height: 34px;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
+
+  @include vp-1023 {
+    margin: 0 0 7px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 140%;
+    margin: 0 0 11px;
+  }
 }
 
 .advantages__description {
   padding: 0;
   margin: 0;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 25px;
+  }
 }
