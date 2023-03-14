@@ -58,20 +58,17 @@ const optimizePng = () =>
 /*
   Optional tasks
   ---------------------------------
-
   Используйте отличное от дефолтного значение root, если нужно обработать отдельную папку в img,
   а не все изображения в img во всех папках.
-
   root = '' - по дефолту webp добавляются и обновляются во всех папках в source/img/
   root = 'content/' - webp добавляются и обновляются только в source/img/content/
 */
 
 const createWebp = () => {
-  const root = 'products/';
-  return gulp
-      .src(`source/img/${root}**/*.{png,jpg}`)
+  const root = '';
+  return gulp.src(`source/img/${root}**/*.{png,jpg}`)
       .pipe(webp({quality: 90}))
-      .pipe(gulp.dest(`source/img/${root}`));
+      .pipe(gulp.dest('build/img'));
 };
 
 export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};

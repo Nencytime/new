@@ -1970,7 +1970,7 @@ button,
     content: "";
     width: 1000%;
     height: 1px;
-    top: -20px;
+    top: 5px;
     left: -100%;
     background-color: rgba(248, 253, 255, 0.7);
   }
@@ -1983,6 +1983,10 @@ button,
     bottom: 0;
     left: -100%;
     background-color: rgba(248, 253, 255, 0.7);
+  }
+
+  .footer__block:nth-of-type(2n) {
+    margin-left: 0;
   }
 
   .footer__block {
@@ -2007,6 +2011,10 @@ button,
 
   .social__container {
     display: block;
+  }
+
+  .social__logo {
+    margin-bottom: 9px;
   }
 
   .accordion__header {

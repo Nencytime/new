@@ -11,7 +11,8 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
+    "lint": "npm run editorconfig && npm run stylelint",
+
     "build": "cross-env NODE_ENV=production gulp build",
     "dev": "cross-env NODE_ENV=production gulp dev",
     "start": "cross-env NODE_ENV=development gulp start",
@@ -53,6 +54,7 @@
     "postcss": "8.4.14",
     "sass": "1.53.0",
     "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.11",
     "webpack": "4.42.0",
     "webpack-stream": "5.2.1"
   },

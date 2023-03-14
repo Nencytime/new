@@ -1,8 +1,8 @@
-/* window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function() {
   [].forEach.call(document.querySelectorAll('.tel'), function(input) {
     let keyCode;
     function mask(event) {
-      event.keyCode && keyCode = event.keyCode;
+      event.keyCode && keyCode === event.keyCode
       let pos = this.selectionStart;
       if (pos < 3) event.preventDefault();
       let matrix = "+7 (___) ___ ____", i = 0,
@@ -35,4 +35,3 @@
     input.addEventListener("keydown", mask, false);
   });
 });
- */

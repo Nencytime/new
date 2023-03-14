@@ -31,7 +31,7 @@
       content: "";
       width: 1000%;
       height: 1px;
-      top: -20px;
+      top: 5px;
       left: -100%;
       background-color: rgba(248, 253, 255, 0.7);
     }
@@ -61,6 +61,10 @@
   &:nth-of-type(2n) {
     @include vp-1023 {
       margin-left: 118px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
     }
   }
 
