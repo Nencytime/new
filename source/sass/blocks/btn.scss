@@ -1,10 +1,10 @@
 .btn {
   display: inline-flex;
   padding: 10px 15px;
-  font-family: $ff-roboto-condensed;
-  text-transform: uppercase;
 
+  font-family: $ff-roboto-condensed;
   color: $color-alice-blue;
+  text-transform: uppercase;
 
   background-color: $color-transparent;
   border: none;
@@ -12,13 +12,13 @@
 
   transition: opacity $trans-default;
 
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

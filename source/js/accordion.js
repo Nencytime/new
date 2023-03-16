@@ -1,4 +1,5 @@
 class ItcAccordion {
+
   constructor(target, config) {
     this._el = typeof target === 'string' ? document.querySelector(target) : target;
     const defaultConfig = {
@@ -8,6 +9,7 @@ class ItcAccordion {
     this._config = Object.assign(defaultConfig, config);
     this.addEventListener();
   }
+
   addEventListener() {
     this._el.addEventListener('click', (e) => {
       const elHeader = e.target.closest('.accordion__header');
@@ -17,12 +19,15 @@ class ItcAccordion {
       if (!this._config.alwaysOpen) {
         const elOpenItem = this._el.querySelector('.accordion__item-show');
         if (elOpenItem) {
-          elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
+          if (elOpenItem !== elHeader.parentElement) {
+            this.toggle(elOpenItem);
+          }
         }
       }
       this.toggle(elHeader.parentElement);
     });
   }
+
   show(el) {
     const elBody = el.querySelector('.accordion__body');
     if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item-show')) {
@@ -35,7 +40,7 @@ class ItcAccordion {
     elBody.style['transition'] = `height ${this._config.duration}ms ease`;
     elBody.classList.add('collapsing');
     el.classList.add('accordion__item-slidedown');
-    elBody.offsetHeight;
+    // elBody.offsetHeight;
     elBody.style['height'] = `${height}px`;
     window.setTimeout(() => {
       elBody.classList.remove('collapsing');
@@ -48,13 +53,14 @@ class ItcAccordion {
       elBody.style['overflow'] = '';
     }, this._config.duration);
   }
+
   hide(el) {
     const elBody = el.querySelector('.accordion__body');
     if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item-show')) {
       return;
     }
     elBody.style['height'] = `${elBody.offsetHeight}px`;
-    elBody.offsetHeight;
+    // elBody.offsetHeight;
     elBody.style['display'] = 'block';
     elBody.style['height'] = 0;
     elBody.style['overflow'] = 'hidden';
@@ -71,8 +77,12 @@ class ItcAccordion {
       elBody.style['overflow'] = '';
     }, this._config.duration);
   }
+
   toggle(el) {
-    el.classList.contains('accordion__item-show') ? this.hide(el) : this.show(el);
+    if (el.classList.contains('accordion__item-show')) {
+      this.hide(el);
+    }
+    this.show(el);
   }
 }
 

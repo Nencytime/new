@@ -1,16 +1,17 @@
 .header {
+  position: fixed;
+  z-index: 3;
+
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 35px;
+
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
 
   @include vp-1023 {
     padding-top: 20px;
     padding-bottom: 25px;
   }
-
   @include vp-767 {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -19,84 +20,48 @@
 
 .header__container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header__logo {
-  display: flex;
-  align-items: center;
-
+.header__logo-link {
   @include vp-767 {
     margin-top: 5px;
   }
 }
 
-.header__logo-text {
-  color: $color-alice-blue;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 15px;
-  padding: 0;
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.header__logo-img {
-  @include vp-767 {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.header__logo-name {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-  margin-bottom: 5px;
-  font-family: $ff-roboto-condensed;
-}
-
-.header__logo-description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  font-family: $ff-roboto;
-
-  color: rgba($color-white, 0.7);
-}
-
 .header__list {
-  padding: 0;
-  margin: -10px 0 0 30px;
-  list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(2, 225px);
-  gap: 30px;
+  margin: -6px 0 0 15px;
+  padding: 0;
 
+  list-style-type: none;
+
+  gap: 30px;
+  grid-template-columns: repeat(2, 225px);
   @include vp-1023 {
     display: flex;
-    gap: 5px;
     margin: -17px 17px 0 0;
-  }
 
+    gap: 5px;
+  }
   @include vp-767 {
     margin: 0 10px 0 0;
+
     gap: 0;
   }
 }
 
 .header__link {
-  color: $color-alice-blue;
-  line-height: 18px;
   display: flex;
   align-items: center;
 
+  line-height: 18px;
+  color: $color-alice-blue;
+
   @include vp-1023 {
-    padding: 10px;
     margin-left: 20px;
+    padding: 10px;
   }
 }
 
@@ -109,9 +74,10 @@
 }
 
 .header__button {
+  margin: -8px 60px 0 0;
+
   border: 1px solid $color-alice-blue;
   border-radius: 3px;
-  margin: -8px 60px 0 0;
 
   @include vp-1023 {
     display: none;

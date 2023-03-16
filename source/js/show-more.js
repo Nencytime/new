@@ -1,4 +1,4 @@
-const text = document.querySelector('.info__text-container');
+const text = document.querySelector('.info__description-container');
 const button = document.querySelector('.info__button');
 
 button.onclick = function () {

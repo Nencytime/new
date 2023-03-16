@@ -6,24 +6,28 @@
 
     &::after,
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
+
       background-color: $color-alice-blue;
+
       transition: transform 0.2s ease-out;
     }
 
     &::before {
       top: 7px;
+      right: 0;
+
       width: 15px;
       height: 1px;
-      right: 26px;
     }
 
     &::after {
       top: 0;
+      right: 7px;
+
       width: 1px;
       height: 15px;
-      right: 33px;
     }
   }
 }

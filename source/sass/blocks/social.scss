@@ -1,60 +1,35 @@
-.social__container {
-  margin-right: 174px;
+.social {
+  margin-right: 160px;
 
   @include vp-1023 {
     display: flex;
     justify-content: space-between;
     margin: 0;
   }
-
   @include vp-767 {
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -18px;
+    margin-bottom: 17px;
   }
 }
 
-.social__logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+.social__logo-link {
+  display: block;
+  margin-bottom: 24px;
 
   @include vp-767 {
-    margin-bottom: 9px;
-  }
-}
-
-.social__logo-text {
-  color: $color-alice-blue;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 15px;
-  padding: 0;
-}
-
-.social__logo-name {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 29px;
-  margin-bottom: 5px;
-  font-family: $ff-roboto-condensed;
-}
-
-.social__logo-description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  font-family: $ff-roboto;
-  color: rgba($color-white, 0.7);
-
-  @include vp-1023 {
-    margin-top: -5px;
+    margin-bottom: 3px;
+    margin-left: 10px;
   }
 }
 
 .social__list {
-  padding: 0;
-  margin: 0 0 0 -5px;
-  list-style-type: none;
   display: flex;
+  margin: 0 0 0 -5px;
+  padding: 0;
+
+  list-style-type: none;
 
   @include vp-1023 {
     margin: 6px -8px 0 0;
@@ -66,6 +41,7 @@
 }
 
 .social__icon {
-  fill: $color-white;
   padding: 5px;
+
+  fill: $color-white;
 }
