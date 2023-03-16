@@ -1,115 +1,3 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/vendor.js");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "./js/vendor.js":
-/*!**********************!*\
-  !*** ./js/vendor.js ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor_focus_visible_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible-polyfill */ "./js/vendor/focus-visible-polyfill.js");
-/* harmony import */ var _vendor_focus_visible_polyfill__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_polyfill__WEBPACK_IMPORTED_MODULE_0__);
-// Swiper 7.4.1
-// import './vendor/swiper';
-
-
-/***/ }),
-
-/***/ "./js/vendor/focus-visible-polyfill.js":
-/*!*********************************************!*\
-  !*** ./js/vendor/focus-visible-polyfill.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
 /**
  * Applies the :focus-visible polyfill at the given scope.
  * A scope in this case is either the top-level Document or a Shadow Root.
@@ -121,6 +9,7 @@ function applyFocusVisiblePolyfill(scope) {
   var hadKeyboardEvent = true;
   var hadFocusVisibleRecently = false;
   var hadFocusVisibleRecentlyTimeout = null;
+
   var inputTypesAllowlist = {
     text: true,
     search: true,
@@ -134,7 +23,7 @@ function applyFocusVisiblePolyfill(scope) {
     week: true,
     time: true,
     datetime: true,
-    'datetime-local': true
+    'datetime-local': true,
   };
 
   /**
@@ -143,7 +32,14 @@ function applyFocusVisiblePolyfill(scope) {
    * @param {Element} el
    */
   function isValidFocusTarget(el) {
-    if (el && el !== document && el.nodeName !== 'HTML' && el.nodeName !== 'BODY' && 'classList' in el && 'contains' in el.classList) {
+    if (
+      el &&
+      el !== document &&
+      el.nodeName !== 'HTML' &&
+      el.nodeName !== 'BODY' &&
+      'classList' in el &&
+      'contains' in el.classList
+    ) {
       return true;
     }
     return false;
@@ -159,15 +55,19 @@ function applyFocusVisiblePolyfill(scope) {
   function focusTriggersKeyboardModality(el) {
     var type = el.type;
     var tagName = el.tagName;
+
     if (tagName === 'INPUT' && inputTypesAllowlist[type] && !el.readOnly) {
       return true;
     }
+
     if (tagName === 'TEXTAREA' && !el.readOnly) {
       return true;
     }
+
     if (el.isContentEditable) {
       return true;
     }
+
     return false;
   }
 
@@ -209,9 +109,11 @@ function applyFocusVisiblePolyfill(scope) {
     if (e.metaKey || e.altKey || e.ctrlKey) {
       return;
     }
+
     if (isValidFocusTarget(scope.activeElement)) {
       addFocusVisibleClass(scope.activeElement);
     }
+
     hadKeyboardEvent = true;
   }
 
@@ -239,6 +141,7 @@ function applyFocusVisiblePolyfill(scope) {
     if (!isValidFocusTarget(e.target)) {
       return;
     }
+
     if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {
       addFocusVisibleClass(e.target);
     }
@@ -252,6 +155,7 @@ function applyFocusVisiblePolyfill(scope) {
     if (!isValidFocusTarget(e.target)) {
       return;
     }
+
     if (e.target.classList.contains('focus-visible') || e.target.hasAttribute('data-focus-visible-added')) {
       // To detect a tab/window switch, we look for a blur event followed
       // rapidly by a visibility change.
@@ -301,6 +205,7 @@ function applyFocusVisiblePolyfill(scope) {
     document.addEventListener('touchstart', onInitialPointerMove);
     document.addEventListener('touchend', onInitialPointerMove);
   }
+
   function removeInitialPointerMoveListeners() {
     document.removeEventListener('mousemove', onInitialPointerMove);
     document.removeEventListener('mousedown', onInitialPointerMove);
@@ -326,6 +231,7 @@ function applyFocusVisiblePolyfill(scope) {
     if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
       return;
     }
+
     hadKeyboardEvent = false;
     removeInitialPointerMoveListeners();
   }
@@ -338,6 +244,7 @@ function applyFocusVisiblePolyfill(scope) {
   document.addEventListener('pointerdown', onPointerDown, true);
   document.addEventListener('touchstart', onPointerDown, true);
   document.addEventListener('visibilitychange', onVisibilityChange, true);
+
   addInitialPointerMoveListeners();
 
   // For focus and blur, we specifically care about state changes in the local
@@ -375,6 +282,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   // Notify interested libraries of the polyfill's presence, in case the
   // polyfill was loaded lazily:
   var event;
+
   try {
     event = new CustomEvent('focus-visible-polyfill-ready');
   } catch (error) {
@@ -382,15 +290,12 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     event = document.createEvent('CustomEvent');
     event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});
   }
+
   window.dispatchEvent(event);
 }
+
 if (typeof document !== 'undefined') {
   // Apply the polyfill to the global document, so that no JavaScript
   // coordination is required to use the polyfill in the top-level document:
   applyFocusVisiblePolyfill(document);
 }
-
-/***/ })
-
-/******/ });
-//# sourceMappingURL=vendor.min.js.map
