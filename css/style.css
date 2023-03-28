@@ -436,7 +436,6 @@ html {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -704,13 +703,14 @@ button,
 
 .modal__container {
   position: relative;
-  top: 139px;
+  top: 146px;
   width: 60%;
   max-width: 500px;
-  margin: auto;
+  margin-left: 702px;
   padding: 38px 40px 45px;
   color: #ffffff;
   background-color: #00b2ff;
+  border-radius: 3px;
 }
 
 .modal__container p {
@@ -764,6 +764,7 @@ button,
 .modal__title {
   margin: 0 0 3px;
   padding: 0;
+  font-weight: 400;
   font-size: 30px;
   line-height: 42px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
@@ -781,6 +782,7 @@ button,
 }
 
 .header__container {
+  padding-left: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -792,10 +794,14 @@ button,
   align-items: center;
 }
 
+.header__logo-link {
+  margin-left: 7px;
+}
+
 .header__list {
   display: -ms-grid;
   display: grid;
-  margin: -6px 0 0 15px;
+  margin: -8px 0 0 10px;
   padding: 0;
   list-style-type: none;
   gap: 30px;
@@ -835,8 +841,8 @@ button,
 }
 
 .intro__container {
-  margin-left: 10.3%;
-  padding-top: 305px;
+  margin-left: 10.2%;
+  padding-top: 302px;
 }
 
 .intro__container p {
@@ -849,7 +855,7 @@ button,
 }
 
 .intro__title {
-  margin: 0 0 31px;
+  margin: 0 0 34px;
   padding: 0;
   font-style: normal;
   font-weight: 700;
@@ -857,7 +863,7 @@ button,
   line-height: 94px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 
 .intro__link {
@@ -869,12 +875,13 @@ button,
   text-align: center;
   color: inherit;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.04em;
   background-color: #00b2ff;
   border-radius: 3px;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  margin-left: 0;
 }
 
 .intro__link.focus-visible:focus {
@@ -1112,14 +1119,16 @@ button,
 .form__title {
   margin: 0 0 12px;
   padding: 0;
+  font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
 }
 
 .form__img-container {
-  width: 50%;
-  margin-right: -40px;
+  width: 50.7%;
+  margin-right: -54px;
+  height: auto;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(4, 24, 39, 0.5)), color-stop(50%, #00b2ff), color-stop(50%, #00b2ff));
   background: -o-linear-gradient(top left, rgba(4, 24, 39, 0.5) 50%, #00b2ff 50%, #00b2ff 50%);
   background: linear-gradient(to bottom right, rgba(4, 24, 39, 0.5) 50%, #00b2ff 50%, #00b2ff 50%);
@@ -1127,14 +1136,14 @@ button,
 
 .form__img-container img {
   margin-top: 246px;
-  margin-right: 100px;
+  margin-right: 113px;
   margin-left: auto;
 }
 
 .form__container {
   width: 50%;
   margin-top: 165px;
-  margin-bottom: 243px;
+  margin-bottom: 245px;
 }
 
 .form__container p {
@@ -1151,7 +1160,7 @@ button,
 .form__block--info {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   gap: 20px 30px;
   -ms-grid-columns: (275px)[2];
   grid-template-columns: repeat(2, 275px);
@@ -1468,8 +1477,13 @@ button,
   }
 
   .header {
+    padding-left: 0;
     padding-top: 20px;
     padding-bottom: 25px;
+  }
+
+  .header__logo-link {
+    margin-left: 0;
   }
 
   .header__list {
@@ -1510,7 +1524,7 @@ button,
     margin: 0;
     font-size: 64px;
     line-height: 75px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.07em;
   }
 
   .intro__link {
@@ -1612,6 +1626,11 @@ button,
   }
 
   .form__button {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 16px 25px 14px;
+    letter-spacing: 0.05em;
     margin-right: 85px;
   }
 
@@ -1696,7 +1715,7 @@ button,
 
   .intro__link {
     margin-left: 0;
-    padding: 12px 43px;
+    padding: 10px 38px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
@@ -1825,7 +1844,6 @@ button,
   }
 
   .form__title {
-    font-weight: 400;
     font-size: 30px;
     line-height: 42px;
   }
@@ -1865,7 +1883,6 @@ button,
     margin-bottom: 25px;
     font-size: 16px;
     line-height: 19px;
-    letter-spacing: 0.05em;
   }
 
   .form__checkbox {
