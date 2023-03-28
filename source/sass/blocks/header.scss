@@ -9,6 +9,7 @@
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @include vp-1023 {
+    padding-left: 0;
     padding-top: 20px;
     padding-bottom: 25px;
   }
@@ -20,12 +21,23 @@
 }
 
 .header__container {
+  padding-left: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1023 {
+    //padding-left: 0;
+  }
 }
 
 .header__logo-link {
+  margin-left: 7px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+
   @include vp-767 {
     margin-top: 5px;
   }
@@ -33,7 +45,7 @@
 
 .header__list {
   display: grid;
-  margin: -6px 0 0 15px;
+  margin: -8px 0 0 10px;
   padding: 0;
 
   list-style-type: none;

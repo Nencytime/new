@@ -11,6 +11,7 @@
 .form__title {
   margin: 0 0 12px;
   padding: 0;
+  font-weight: 400;
 
   font-size: 36px;
   line-height: 51px;
@@ -21,15 +22,15 @@
   }
 
   @include vp-767 {
-    font-weight: 400;
     font-size: 30px;
     line-height: 42px;
   }
 }
 
 .form__img-container {
-  width: 50%;
-  margin-right: -40px;
+  width: 50.7%;
+  margin-right: -54px;
+  height: auto;
 
   background: linear-gradient(to bottom right, rgba($color-black-pearl, 0.5) 50%, $color-deep-sky-blue 50%, $color-deep-sky-blue 50%);
 
@@ -39,7 +40,7 @@
 
   img {
     margin-top: 246px;
-    margin-right: 100px;
+    margin-right: 113px;
     margin-left: auto;
   }
 }
@@ -47,7 +48,7 @@
 .form__container {
   width: 50%;
   margin-top: 165px;
-  margin-bottom: 243px;
+  margin-bottom: 245px;
 
   @include vp-1023 {
     width: 100%;
@@ -82,7 +83,7 @@
 
   &--info {
     display: grid;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
 
     gap: 20px 30px;
     grid-template-columns: repeat(2, 275px);
@@ -178,6 +179,9 @@
   border-radius: 3px;
 
   @include vp-1023 {
+    height: fit-content;
+    padding: 16px 25px 14px;
+    letter-spacing: 0.05em;
     margin-right: 85px;
   }
 
@@ -187,7 +191,6 @@
 
     font-size: 16px;
     line-height: 19px;
-    letter-spacing: 0.05em;
   }
 
   .modal & {
