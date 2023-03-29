@@ -23,7 +23,7 @@
 }
 
 .intro__container {
-  margin-left: 10.2%;
+  margin-left: 10.8%;
   padding-top: 302px;
 
   @include vp-1023 {
@@ -67,14 +67,14 @@
   line-height: 94px;
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.11em;
 
   @include vp-1023 {
     margin: 0;
 
     font-size: 64px;
     line-height: 75px;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.09em;
   }
 
   @include vp-767 {
@@ -96,7 +96,7 @@
   text-align: center;
   color: inherit;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
 
   background-color: $color-deep-sky-blue;
   border-radius: 3px;

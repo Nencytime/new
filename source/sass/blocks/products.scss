@@ -1,10 +1,12 @@
 .products {
+  padding-left: 10px;
   padding-top: 66px;
   padding-bottom: 140px;
 
   background-color: $color-black-pearl;
 
   @include vp-1023 {
+    padding-left: 0;
     padding-top: 54px;
     padding-bottom: 45px;
   }

@@ -14,13 +14,17 @@
 
 .advantages__list {
   display: grid;
-  margin: 0;
+  margin: 0 0 0 7px;
   padding: 0;
 
   list-style-type: none;
 
   gap: 30px;
   grid-template-columns: 1fr 1fr;
+
+  @include vp-1023 {
+    margin: 0;
+  }
 
   @include vp-767 {
     display: block;

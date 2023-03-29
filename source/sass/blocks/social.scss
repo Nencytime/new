@@ -1,4 +1,5 @@
 .social {
+  margin-left: 7px;
   margin-right: 160px;
 
   @include vp-1023 {
@@ -10,7 +11,7 @@
   @include vp-767 {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
     margin-left: -18px;
   }
 }
