@@ -25,10 +25,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include vp-1023 {
-    //padding-left: 0;
-  }
 }
 
 .header__logo-link {
