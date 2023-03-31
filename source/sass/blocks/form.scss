@@ -11,8 +11,8 @@
 .form__title {
   margin: 0 0 12px;
   padding: 0;
-  font-weight: 400;
 
+  font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   font-family: $ff-roboto-condensed;
@@ -29,8 +29,8 @@
 
 .form__img-container {
   width: 50.7%;
-  margin-right: -54px;
   height: auto;
+  margin-right: -54px;
 
   background: linear-gradient(to bottom right, rgba($color-black-pearl, 0.5) 50%, $color-deep-sky-blue 50%, $color-deep-sky-blue 50%);
 
@@ -48,6 +48,7 @@
 .form__container {
   width: 50%;
   margin-top: 165px;
+  margin-right: auto;
   margin-bottom: 245px;
 
   @include vp-1023 {
@@ -83,10 +84,11 @@
 
   &--info {
     display: grid;
-    margin-bottom: 30px;
+    max-width: 580px;
+    margin-bottom: 20px;
 
-    gap: 20px 30px;
-    grid-template-columns: repeat(2, 275px);
+    gap: 10px 30px;
+    grid-template-columns: repeat(2, 1fr);
 
     @include vp-1023 {
       grid-template-columns: repeat(2, 320px);
@@ -94,6 +96,7 @@
 
     @include vp-767 {
       display: block;
+      max-width: 100%;
       margin-bottom: 6px;
     }
 
@@ -104,6 +107,8 @@
   }
 
   &--button {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: baseline;
 
     @include vp-1023 {
@@ -111,7 +116,7 @@
     }
 
     @include vp-767 {
-      display: block;
+      flex-direction: column-reverse;
     }
 
     .modal & {
@@ -126,12 +131,17 @@
   @include vp-1023 {
     margin-left: 0;
   }
+
+  .modal & {
+    margin-left: 0;
+  }
 }
 
 .form__field {
   input,
   textarea {
     width: 100%;
+    margin-bottom: 10px;
     padding: 15px;
 
     color: $color-white;
@@ -140,17 +150,23 @@
     border: none;
     border-radius: 3px;
 
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
     @include vp-767 {
       margin-bottom: 20px;
     }
 
     &::placeholder {
-      color: $color-white;
+      color: $color-whisper;
     }
   }
 
   .modal & {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   textarea {
@@ -178,28 +194,30 @@
   min-width: 265px;
   min-height: 45px;
   margin-right: 50px;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0.05em;
 
   font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   background-color: $color-black-pearl;
   border-radius: 3px;
 
   @include vp-1023 {
     height: fit-content;
-    padding: 16px 25px 14px;
-    letter-spacing: 0.05em;
     margin-right: 85px;
+    padding: 16px 25px 14px;
+
+    letter-spacing: 0.05em;
   }
 
   @include vp-767 {
-    padding: 15px 25px 11px;
     width: 100%;
+    margin-right: 0;
     margin-bottom: 25px;
+    padding: 15px 25px 11px;
 
     font-size: 16px;
     line-height: 19px;
@@ -208,6 +226,7 @@
   .modal & {
     width: 100%;
     margin-bottom: 20px;
+
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.05em;
@@ -218,13 +237,13 @@
   font-size: 14px;
   line-height: 16px;
 
-  opacity: 0.8;
-
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .form__checkbox {
   position: relative;
+  user-select: none;
 
   display: block;
   max-width: 235px;
@@ -234,6 +253,12 @@
   line-height: 16px;
 
   cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 
   @include vp-767 {
     max-width: 100%;
@@ -258,6 +283,10 @@
 
       background-image: url("../img/svg/mark.svg");
       background-repeat: no-repeat;
+    }
+
+    &:focus + .form__mark {
+      outline: 2px solid $color-white;
     }
   }
 }

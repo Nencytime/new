@@ -1,5 +1,6 @@
 .accordion__header {
   position: relative;
+  padding-right: 30px;
 
   @include vp-767 {
     cursor: pointer;

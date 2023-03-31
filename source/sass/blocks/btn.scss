@@ -9,6 +9,7 @@
   background-color: $color-transparent;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 

@@ -1,10 +1,12 @@
 .info {
   padding-top: 120px;
   padding-bottom: 118px;
+  margin-left: 10px;
 
   background-color: $color-alice-blue;
 
   @include vp-1023 {
+    margin-left: 0;
     padding-top: 74px;
     padding-bottom: 80px;
   }
@@ -18,7 +20,7 @@
   position: relative;
 
   width: fit-content;
-  padding-left: 255px;
+  padding-left: 250px;
 
   color: $color-black-pearl;
 
@@ -34,7 +36,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
 
     width: 150px;
     height: 320px;
@@ -42,6 +44,7 @@
     background-image: url("../img/2022.png");
 
     @include vp-1023 {
+      left: 0;
       top: 7px;
     }
 
