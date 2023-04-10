@@ -90,4 +90,3 @@ const accordion = new ItcAccordion(document.querySelector('.accordion'), {
 });
 
 export {accordion};
-
