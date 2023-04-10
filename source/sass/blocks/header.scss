@@ -9,6 +9,7 @@
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 
   @include vp-1023 {
+    position: relative;
     padding-left: 0;
     padding-top: 20px;
     padding-bottom: 25px;
@@ -97,7 +98,8 @@
 }
 
 .header__button {
-  margin: -8px 50px 0 0;
+  margin: 0 50px 10px 0;
+  max-width: 200px;
 
   border: 1px solid $color-alice-blue;
   border-radius: 3px;

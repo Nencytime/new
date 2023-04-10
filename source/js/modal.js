@@ -1,6 +1,6 @@
 const INTERECTIVE_SELECTORS = ['a', 'button', 'input', 'textarea', '[tabindex]'];
 
-// const body = document.querySelector('body');
+const body = document.querySelector('body');
 const openButton = document.querySelector('.header__button');
 const input = document.querySelector('.form__input--name');
 const modalWindow = document.querySelector('.modal');
@@ -52,6 +52,34 @@ class ModalWindow {
   }
 }
 
+const showPrompt = () => {
+  const form = document.querySelector('.form__post--modal');
+  const container = document.querySelector('.modal__container');
+  const lastElem = form.elements[form.elements.length - 1];
+  const firstElem = form.elements[0];
+
+  lastElem.onkeydown = (e) => {
+    if (e.key === 'Tab' && !e.shiftKey) {
+      firstElem.focus();
+      return false;
+    }
+    return false;
+  };
+
+  firstElem.onkeydown = (e) => {
+    if (e.key === 'Tab' && e.shiftKey) {
+      lastElem.focus();
+      return;
+    }
+  };
+
+  container.style.display = 'block';
+};
+
+openButton.onclick = () => {
+  showPrompt();
+};
+
 const modal = new ModalWindow(document, modalWindow);
 
 const modalControl = () => {
@@ -61,7 +89,7 @@ const modalControl = () => {
     if (target === modalWindow || event.code === 'Escape' || target.closest('.modal__button')) {
       modalWindow.classList.toggle('modal-close');
       modalWindow.classList.remove('modal-open');
-      // body.style.overflow = 'auto';
+      body.style.overflowY = 'auto';
       modal.remove();
     }
     document.removeEventListener('keydown', closeModal);
@@ -72,7 +100,7 @@ const modalControl = () => {
     modalWindow.classList.toggle('modal-open');
     modal.create();
     input.focus();
-    // body.style.overflow = 'hidden';
+    body.style.overflowY = 'hidden';
     document.addEventListener('keydown', closeModal);
   };
 

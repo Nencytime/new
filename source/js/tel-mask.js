@@ -1,40 +1,40 @@
-window.addEventListener('DOMContentLoaded', function () {
-  [].forEach.call(document.querySelectorAll('.form__input--tel'), function (input) {
-    let keyCode;
-    function mask(event) {
-      // event.keyCode && keyCode === event.keyCode;
-      let pos = input.selectionStart;
-      if (pos < 3) {
-        event.preventDefault();
-      }
-      let matrix = '+7 (___) ___ ____';
-      let i = 0;
-      let def = matrix.replace(/\D/g, '');
-      let val = input.value.replace(/\D/g, '');
-      let newValue = matrix.replace(/[_\d]/g, function (a) {
-        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-      });
-      i = newValue.indexOf('_');
-      if (i !== -1) {
-        // i < 5 && i === 3;
-        newValue = newValue.slice(0, i);
-      }
-      let reg = matrix.substr(0, input.value.length).replace(/_+/g,
-          function (a) {
-            return '\\d{1,' + a.length + '}';
-          }).replace(/[+()]/g, '\\$&');
-      reg = new RegExp('^' + reg + '$');
-      if (!reg.test(input.value) || input.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        input.value = newValue;
-      }
-      if (event.type === 'blur' && input.value.length < 5) {
-        input.value = '';
-      }
+const onEventCalllback = function (evt) {
+  const el = evt.target;
+  const clearVal = el.dataset.phoneClear;
+  const pattern = el.dataset.phonePattern;
+  const matrixDef = '+7 (___) ___-__-__';
+  const matrix = pattern ? pattern : matrixDef;
+  const def = matrix.replace(/\D/g, '');
+  let i = 0;
+  let val = evt.target.value.replace(/\D/g, '');
+  if (clearVal !== 'false' && evt.type === 'blur') {
+    if (val.length < matrix.match(/([\_\d])/g).length) {
+      evt.target.value = '';
+      return;
     }
-
-    input.addEventListener('input', mask, false);
-    input.addEventListener('focus', mask, false);
-    input.addEventListener('blur', mask, false);
-    input.addEventListener('keydown', mask, false);
+  }
+  if (def.length >= val.length) {
+    val = def;
+  }
+  evt.target.value = matrix.replace(/./g, function (a) {
+    if (/[_\d]/.test(a) && i < val.length) {
+      return val.charAt(i++);
+    } return i >= val.length ? '' : a;
   });
-});
+
+  const message = document.querySelector('.form__message');
+  if (val.length > 1 && val.length < 11) {
+    message.style.display = 'block';
+  } else {
+    message.style.display = 'none';
+  }
+
+  const messageModal = document.querySelector('.form__message--modal');
+  if (val.length > 1 && val.length < 11) {
+    messageModal.style.display = 'block';
+  } else {
+    messageModal.style.display = 'none';
+  }
+};
+
+export {onEventCalllback};

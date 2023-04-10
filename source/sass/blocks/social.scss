@@ -37,11 +37,16 @@
   margin: 0 0 0 -5px;
   padding: 0;
   flex-wrap: wrap;
+  max-width: 200px;
 
   list-style-type: none;
 
   @include vp-1023 {
     margin: 6px -8px 0 0;
+  }
+
+  @include vp-767 {
+    justify-content: center;
   }
 }
 

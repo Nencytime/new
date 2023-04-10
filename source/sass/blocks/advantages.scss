@@ -1,7 +1,7 @@
 .advantages {
   padding-top: 120px;
 
-  background-color: $color-alice-blue;
+  background-color: $color-magnolia;
 
   @include vp-1023 {
     padding-top: 80px;
@@ -84,7 +84,6 @@
     color: $color-white;
 
     background-color: $color-deep-sky-blue;
-    cursor: pointer;
   }
 
   &:hover svg {

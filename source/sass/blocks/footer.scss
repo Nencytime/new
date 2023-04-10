@@ -161,6 +161,14 @@
   @include hover-focus {
     opacity: 0.8;
   }
+
+  &--address {
+    cursor: default;
+
+    @include hover-focus {
+      opacity: 1;
+    }
+  }
 }
 
 .footer__section-list {
