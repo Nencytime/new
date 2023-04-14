@@ -8,20 +8,22 @@ $color-whisper: #ebebeb;
 $color-alice-blue: #f2f5f7;
 $color-black-pearl: #041827;
 $color-background: #2b5576;
-$color-magnolia: #fdf7ff;
+$color-magnolia: #f8fdff;
 $color-dark-pearl: #03101b;
 
 // Typography
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
+
 $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/footer/159/#13
-$ff-mono: "Mono", "Times New Roman", serif;
+
+$ff-mono: "PT Mono", "Arial", sans-serif;
 $ff-roboto: "Roboto", "Arial", sans-serif;
-$ff-roboto-condensed: "Roboto-Condensed", "Arial", sans-serif;
+$ff-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

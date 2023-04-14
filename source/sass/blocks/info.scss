@@ -44,7 +44,7 @@
     background-image: url("../img/2022.png");
 
     @include vp-1023 {
-      left: 0;
+      left: -4px;
       top: 7px;
     }
 
