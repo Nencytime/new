@@ -385,38 +385,36 @@ template {
 }
 
 @font-face {
-  font-family: "Mono";
-  font-weight: 400;
+  font-family: "PT Mono";
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url("../fonts/monoregular.woff2") format("woff2"), url("../fonts/monoregular.woff") format("woff");
+  src: local("PT Mono"), url("../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/PTMono-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
-  font-weight: 400;
   font-style: normal;
+  font-weight: 500;
   font-display: swap;
-  src: url("../fonts/robotoregular.woff2") format("woff2"), url("../fonts/robotoregular.woff") format("woff");
+  src: local("Roboto"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto-Condensed";
-  font-weight: 400;
+  font-family: "Roboto Condensed";
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
+  src: local("Roboto Condensed"), url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
-/* @font-face {
+@font-face {
+  font-family: "Roboto Condensed";
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
+  font-weight: 700;
   font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2");
-} */
+  src: local("Roboto Condensed"), url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+}
 
 *,
 *::before,
@@ -439,7 +437,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Mono", "Times New Roman", serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-style: normal;
   color: #000000;
   -webkit-font-smoothing: antialiased;
@@ -661,7 +659,7 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 15px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #f2f5f7;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0);
@@ -780,7 +778,7 @@ button,
   font-weight: 400;
   font-size: 30px;
   line-height: 42px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .header {
@@ -856,7 +854,7 @@ button,
 }
 
 .header__button {
-  margin: 0 50px 10px 0;
+  margin: 0 52px 7px 0;
   max-width: 200px;
   border: 1px solid #f2f5f7;
   border-radius: 3px;
@@ -875,7 +873,7 @@ button,
 
 .intro__container {
   margin-left: 10.8%;
-  padding-top: 302px;
+  padding-top: 304px;
 }
 
 .intro__container p {
@@ -892,11 +890,11 @@ button,
   padding: 0;
   font-style: normal;
   font-weight: 700;
-  font-size: 78px;
+  font-size: 80px;
   line-height: 94px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.07em;
 }
 
 .intro__link {
@@ -906,11 +904,11 @@ button,
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   text-align: center;
   color: inherit;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
   background-color: #00b2ff;
   border-radius: 3px;
   -webkit-transition: opacity 0.3s ease;
@@ -933,7 +931,7 @@ button,
 
 .advantages {
   padding-top: 120px;
-  background-color: #fdf7ff;
+  background-color: #f8fdff;
 }
 
 .advantages__list {
@@ -993,7 +991,7 @@ button,
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #00b2ff;
 }
 
@@ -1001,7 +999,7 @@ button,
   padding-top: 120px;
   padding-bottom: 118px;
   margin-left: 10px;
-  background-color: #fdf7ff;
+  background-color: #f8fdff;
 }
 
 .info__container {
@@ -1029,7 +1027,7 @@ button,
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .info__description {
@@ -1055,7 +1053,7 @@ button,
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   text-align: center;
   color: #00b2ff;
   text-transform: uppercase;
@@ -1077,7 +1075,7 @@ button,
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 }
 
@@ -1101,6 +1099,7 @@ button,
   position: relative;
   margin: 0 auto;
   max-height: calc(100% - 60px);
+  width: 100%;
 }
 
 .products__link {
@@ -1116,7 +1115,7 @@ button,
   margin: 0;
   font-size: 20px;
   line-height: 30px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 }
 
@@ -1177,7 +1176,7 @@ button,
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
 .form__img-container {
@@ -1324,7 +1323,7 @@ button,
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background-color: #041827;
@@ -1394,7 +1393,7 @@ button,
 
 .form__mark {
   position: absolute;
-  top: 4px;
+  top: 7px;
   left: 0;
   width: 15px;
   height: 15px;
@@ -1414,12 +1413,10 @@ button,
 
 .form__message {
   display: none;
-  position: absolute;
   background-color: #ffffff;
   color: #000000;
   font-size: 14px;
   padding: 10px;
-  width: 185px;
   border-radius: 4px;
 }
 
@@ -1454,7 +1451,7 @@ button,
   padding: 0;
   font-size: 15px;
   line-height: 16px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1643,8 +1640,8 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: -17px 17px 0 0;
-    gap: 5px;
+    margin: -17px 18px 0 0;
+    gap: 0;
   }
 
   .header__link {
@@ -1678,7 +1675,7 @@ button,
     margin: 0;
     font-size: 64px;
     line-height: 75px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.07em;
   }
 
   .intro__link {
@@ -1717,7 +1714,7 @@ button,
   }
 
   .info__container::before {
-    left: 0;
+    left: -4px;
     top: 7px;
   }
 
@@ -1758,6 +1755,8 @@ button,
 
   .products__img img {
     height: 250px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
   .form {
@@ -1813,11 +1812,11 @@ button,
   }
 
   .form__checkbox {
-    margin-bottom: 0;
+    margin-bottom: -6px;
   }
 
   .form__mark {
-    top: 10px;
+    top: 6px;
   }
 
   .footer {
@@ -1991,7 +1990,7 @@ button,
 
   .products {
     padding-top: 46px;
-    padding-bottom: 56px;
+    padding-bottom: 86px;
   }
 
   .products__title {
@@ -2033,7 +2032,7 @@ button,
   }
 
   .form__container {
-    margin-bottom: 88px;
+    margin-bottom: 95px;
   }
 
   .form__container p {
@@ -2080,7 +2079,7 @@ button,
   }
 
   .form__mark {
-    top: 6px;
+    top: calc(50% - 10px);
     left: 5px;
   }
 
@@ -2105,7 +2104,7 @@ button,
 
   .footer__block {
     max-width: none;
-    margin-top: 20px;
+    margin-top: 22px;
   }
 
   .footer__block::before {
@@ -2146,7 +2145,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     margin-left: -18px;
   }
 
@@ -2178,15 +2177,15 @@ button,
   }
 
   .accordion__header::before {
-    top: 7px;
-    right: 0;
+    top: 4px;
+    right: 2px;
     width: 15px;
     height: 1px;
   }
 
   .accordion__header::after {
-    top: 0;
-    right: 7px;
+    top: -3px;
+    right: 9px;
     width: 1px;
     height: 15px;
   }
