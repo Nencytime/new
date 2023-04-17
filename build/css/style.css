@@ -1191,6 +1191,7 @@ button,
   margin-top: 246px;
   margin-right: 113px;
   margin-left: auto;
+  width: calc(27% + 250px);
 }
 
 .form__container {
@@ -1236,8 +1237,6 @@ button,
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .modal .form__block--button {
@@ -1356,7 +1355,7 @@ button,
   -ms-user-select: none;
   user-select: none;
   display: block;
-  max-width: 235px;
+  width: 220px;
   padding-left: 26px;
   margin-bottom: 15px;
   font-size: 14px;

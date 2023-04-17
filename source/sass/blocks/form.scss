@@ -46,6 +46,7 @@
     margin-top: 246px;
     margin-right: 113px;
     margin-left: auto;
+    width: calc(27% + 250px);
   }
 }
 
@@ -113,7 +114,6 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: baseline;
-    flex-wrap: wrap;
 
     @include vp-1023 {
       align-items: center;
@@ -254,7 +254,7 @@
   user-select: none;
 
   display: block;
-  max-width: 235px;
+  width: 220px;
   padding-left: 26px;
   margin-bottom: 15px;
 

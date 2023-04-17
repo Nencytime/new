@@ -195,42 +195,44 @@
           <div class="form__img-container">
             <img src="img/airplane.png" width="510" height="285" alt="Белый бумажный самолетик оригами">
           </div>
-          <div class="form__container container">
-            <h2 class="form__title">Остались вопросы? Задайте их&nbsp;нам!</h2>
-            <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <form class="form__post" action="https://echo.htmlacademy.ru/" method="post">
-              <div class="form__block form__block--info">
-                <div class="form__field">
-                  <label>
-                    <span class="visually-hidden">Ваше имя</span>
-                    <input type="text" name="form-name" placeholder="Имя" required>
-                  </label>
+          <div class="form__container">
+            <div class="container">
+              <h2 class="form__title">Остались вопросы? Задайте их&nbsp;нам!</h2>
+              <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+              <form class="form__post" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="form__block form__block--info">
+                  <div class="form__field">
+                    <label>
+                      <span class="visually-hidden">Ваше имя</span>
+                      <input type="text" name="form-name" placeholder="Имя" required>
+                    </label>
+                  </div>
+                  <div class="form__field">
+                    <label>
+                      <span class="visually-hidden">Ваш телефон</span>
+                      <input class="form__input--tel" id="phone" type="tel" name="phone" placeholder="Телефон" maxlength="18" data-phone-pattern required>
+                      <span class="form__message">Номер должен состоять из 11 цифр</span>
+                    </label>
+                  </div>
+                  <div class="form__field form__field--textarea">
+                    <label>
+                      <span class="visually-hidden">Задайте ваш вопрос</span>
+                      <textarea name="form-textarea" placeholder="Ваш вопрос"></textarea>
+                    </label>
+                  </div>
                 </div>
-                <div class="form__field">
-                  <label>
-                    <span class="visually-hidden">Ваш телефон</span>
-                    <input class="form__input--tel" id="phone" type="tel" name="phone" placeholder="Телефон" maxlength="18" data-phone-pattern required>
-                    <span class="form__message">Номер должен состоять из 11 цифр</span>
-                  </label>
+                <div class="form__block form__block--button">
+                  <div class="form__checkbox">
+                    <label>
+                      <input class="visually-hidden" type="checkbox" name="agreement" value="agree" checked required>
+                      <span class="form__mark"></span>
+                      <span class="form__label">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                    </label>
+                  </div>
+                  <button class="form__button btn" type="submit">Задать вопрос</button>
                 </div>
-                <div class="form__field form__field--textarea">
-                  <label>
-                    <span class="visually-hidden">Задайте ваш вопрос</span>
-                    <textarea name="form-textarea" placeholder="Ваш вопрос"></textarea>
-                  </label>
-                </div>
-              </div>
-              <div class="form__block form__block--button">
-                <div class="form__checkbox">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="agreement" value="agree" checked required>
-                    <span class="form__mark"></span>
-                    <span class="form__label">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
-                  </label>
-                </div>
-                <button class="form__button btn" type="submit">Задать вопрос</button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </section>
 
